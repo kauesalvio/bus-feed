@@ -55,7 +55,7 @@
             // lblHoraViagem
             // 
             this.lblHoraViagem.AutoSize = true;
-            this.lblHoraViagem.Location = new System.Drawing.Point(106, 148);
+            this.lblHoraViagem.Location = new System.Drawing.Point(158, 148);
             this.lblHoraViagem.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHoraViagem.Name = "lblHoraViagem";
             this.lblHoraViagem.Size = new System.Drawing.Size(36, 15);
@@ -121,18 +121,18 @@
             this.mskDataViagem.Margin = new System.Windows.Forms.Padding(2);
             this.mskDataViagem.Mask = "00/00/0000";
             this.mskDataViagem.Name = "mskDataViagem";
-            this.mskDataViagem.Size = new System.Drawing.Size(97, 39);
+            this.mskDataViagem.Size = new System.Drawing.Size(149, 39);
             this.mskDataViagem.TabIndex = 3;
             this.mskDataViagem.ValidatingType = typeof(System.DateTime);
             // 
             // mskHoraViagem
             // 
             this.mskHoraViagem.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.mskHoraViagem.Location = new System.Drawing.Point(106, 165);
+            this.mskHoraViagem.Location = new System.Drawing.Point(158, 165);
             this.mskHoraViagem.Margin = new System.Windows.Forms.Padding(2);
             this.mskHoraViagem.Mask = "00:00";
             this.mskHoraViagem.Name = "mskHoraViagem";
-            this.mskHoraViagem.Size = new System.Drawing.Size(53, 39);
+            this.mskHoraViagem.Size = new System.Drawing.Size(129, 39);
             this.mskHoraViagem.TabIndex = 4;
             this.mskHoraViagem.ValidatingType = typeof(System.DateTime);
             // 
