@@ -1,8 +1,11 @@
 ﻿namespace PROVA_DE_SUFICIENCIA.Entities
 {
+    /// <summary>
+    /// Kauê Felipe Salvio
+    /// </summary>
     public class Intermunicipal : Viagem
     {
-        public override int totalDePassageiros { get; set; } = 28;
+        public override int numeroDePassageiros { get; set; } = 28;
         public Intermunicipal(string placaOnibus, string nomeMotorista, DateTime dataViagem, TimeOnly horaViagem) : base(placaOnibus, nomeMotorista, dataViagem, horaViagem)
         { }
 
@@ -11,7 +14,7 @@
             var numeroDePassageiros = Passageiros.Count();
             if (numeroDePassageiros == 28)
             {
-                throw new ArgumentException($"Limite de {totalDePassageiros} passageiros atingido");
+                throw new ArgumentException($"Vagas totais de passageiros atingido! ");
             }
             base.AddPassageiro(passageiro);
         }

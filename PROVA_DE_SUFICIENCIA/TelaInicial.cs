@@ -1,16 +1,11 @@
 ﻿using PROVA_DE_SUFICIENCIA.Entities;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace PROVA_DE_SUFICIENCIA
 {
+    /// <summary>
+    /// Kauê Felipe Salvio
+    /// </summary>
     public partial class TelaInicial : Form
     {
         private readonly List<Viagem> viagens;
@@ -25,7 +20,7 @@ namespace PROVA_DE_SUFICIENCIA
         {
             if(comboBox1.SelectedItem == null)
             {
-                MessageBox.Show("Eh necessario escolher uma veiculo para poder cadastrar passageiros", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ônibus não selecionado! ", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 

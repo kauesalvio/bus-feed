@@ -46,7 +46,7 @@
             // 
             this.mskTxtPlaca.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.mskTxtPlaca.Location = new System.Drawing.Point(318, 64);
-            this.mskTxtPlaca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mskTxtPlaca.Margin = new System.Windows.Forms.Padding(2);
             this.mskTxtPlaca.Mask = "AAA-0000";
             this.mskTxtPlaca.Name = "mskTxtPlaca";
             this.mskTxtPlaca.Size = new System.Drawing.Size(97, 39);
@@ -68,9 +68,9 @@
             this.lblPlaca.Location = new System.Drawing.Point(318, 47);
             this.lblPlaca.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPlaca.Name = "lblPlaca";
-            this.lblPlaca.Size = new System.Drawing.Size(35, 15);
+            this.lblPlaca.Size = new System.Drawing.Size(91, 15);
             this.lblPlaca.TabIndex = 36;
-            this.lblPlaca.Text = "Placa";
+            this.lblPlaca.Text = "Placa do ônibus";
             // 
             // lblDataViagem
             // 
@@ -88,16 +88,16 @@
             this.lblNome.Location = new System.Drawing.Point(5, 47);
             this.lblNome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(94, 15);
+            this.lblNome.Size = new System.Drawing.Size(111, 15);
             this.lblNome.TabIndex = 34;
-            this.lblNome.Text = "Nome motorista";
+            this.lblNome.Text = "Nome do motorista";
             // 
             // RegistrarViagem
             // 
             this.RegistrarViagem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.RegistrarViagem.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.RegistrarViagem.Location = new System.Drawing.Point(298, 284);
-            this.RegistrarViagem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RegistrarViagem.Location = new System.Drawing.Point(299, 314);
+            this.RegistrarViagem.Margin = new System.Windows.Forms.Padding(2);
             this.RegistrarViagem.Name = "RegistrarViagem";
             this.RegistrarViagem.Size = new System.Drawing.Size(135, 41);
             this.RegistrarViagem.TabIndex = 7;
@@ -109,7 +109,7 @@
             // 
             this.txtNomeMotorista.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtNomeMotorista.Location = new System.Drawing.Point(5, 64);
-            this.txtNomeMotorista.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNomeMotorista.Margin = new System.Windows.Forms.Padding(2);
             this.txtNomeMotorista.Name = "txtNomeMotorista";
             this.txtNomeMotorista.Size = new System.Drawing.Size(309, 39);
             this.txtNomeMotorista.TabIndex = 1;
@@ -118,7 +118,7 @@
             // 
             this.mskDataViagem.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.mskDataViagem.Location = new System.Drawing.Point(5, 165);
-            this.mskDataViagem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mskDataViagem.Margin = new System.Windows.Forms.Padding(2);
             this.mskDataViagem.Mask = "00/00/0000";
             this.mskDataViagem.Name = "mskDataViagem";
             this.mskDataViagem.Size = new System.Drawing.Size(97, 39);
@@ -129,10 +129,10 @@
             // 
             this.mskHoraViagem.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.mskHoraViagem.Location = new System.Drawing.Point(106, 165);
-            this.mskHoraViagem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mskHoraViagem.Margin = new System.Windows.Forms.Padding(2);
             this.mskHoraViagem.Mask = "00:00";
             this.mskHoraViagem.Name = "mskHoraViagem";
-            this.mskHoraViagem.Size = new System.Drawing.Size(55, 39);
+            this.mskHoraViagem.Size = new System.Drawing.Size(53, 39);
             this.mskHoraViagem.TabIndex = 4;
             this.mskHoraViagem.ValidatingType = typeof(System.DateTime);
             // 
@@ -140,8 +140,8 @@
             // 
             this.CheckMunicipal.AutoSize = true;
             this.CheckMunicipal.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CheckMunicipal.Location = new System.Drawing.Point(534, 144);
-            this.CheckMunicipal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CheckMunicipal.Location = new System.Drawing.Point(508, 81);
+            this.CheckMunicipal.Margin = new System.Windows.Forms.Padding(2);
             this.CheckMunicipal.Name = "CheckMunicipal";
             this.CheckMunicipal.Size = new System.Drawing.Size(138, 36);
             this.CheckMunicipal.TabIndex = 5;
@@ -153,8 +153,8 @@
             // 
             this.CheckInterMunicipal.AutoSize = true;
             this.CheckInterMunicipal.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CheckInterMunicipal.Location = new System.Drawing.Point(534, 184);
-            this.CheckInterMunicipal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CheckInterMunicipal.Location = new System.Drawing.Point(508, 121);
+            this.CheckInterMunicipal.Margin = new System.Windows.Forms.Padding(2);
             this.CheckInterMunicipal.Name = "CheckInterMunicipal";
             this.CheckInterMunicipal.Size = new System.Drawing.Size(186, 36);
             this.CheckInterMunicipal.TabIndex = 6;
@@ -165,7 +165,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(534, 127);
+            this.label1.Location = new System.Drawing.Point(508, 64);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 15);
             this.label1.TabIndex = 37;
@@ -189,7 +189,7 @@
             this.Controls.Add(this.CheckMunicipal);
             this.Controls.Add(this.RegistrarViagem);
             this.Controls.Add(this.txtNomeMotorista);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ViagemCadastro";
             this.Text = "ViagemCadastro";
             this.ResumeLayout(false);

@@ -1,16 +1,10 @@
 ﻿using PROVA_DE_SUFICIENCIA.Entities;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace PROVA_DE_SUFICIENCIA
 {
+    /// <summary>
+    /// Kauê Felipe Salvio
+    /// </summary>
     public partial class ViagemCadastro : Form
     {
         private readonly List<Viagem> _viagemList;
@@ -22,29 +16,29 @@ namespace PROVA_DE_SUFICIENCIA
 
         private bool ValidarCampos()
         {
-            var valido = true;
+            var isValid = true;
             if (txtNomeMotorista.Text.Length < 1 || txtNomeMotorista.Text.Length > 100)
             {
                 txtNomeMotorista.Focus();
-                valido = false;
+                isValid = false;
             }
             if (mskTxtPlaca.Text.Length > 8)
             {
                 mskTxtPlaca.Focus();
-                valido = false;
+                isValid = false;
             }
             if (mskDataViagem.Text.Length > 10)
             {
                 mskTxtPlaca.Focus();
-                valido = false;
+                isValid = false;
             }
             if (mskHoraViagem.Text.Length > 5)
             {
                 mskTxtPlaca.Focus();
-                valido = false;
+                isValid = false;
             }     
 
-            return valido;
+            return isValid;
         }
         private void RegistrarViagem_Click(object sender, EventArgs e)
         {
@@ -53,15 +47,17 @@ namespace PROVA_DE_SUFICIENCIA
             {
                 var viagem = new Intermunicipal(mskTxtPlaca.Text, txtNomeMotorista.Text, FormatarData(mskDataViagem.Text), FormatarHoras(mskHoraViagem.Text));
                 _viagemList.Add(viagem);
+                MessageBox.Show("Viagem intermunicipal cadastrada com sucesso!");
             }
             else if(CheckMunicipal.Checked)
             {
                 var viagem = new Municipal(mskTxtPlaca.Text, txtNomeMotorista.Text, FormatarData(mskDataViagem.Text), FormatarHoras(mskHoraViagem.Text));
                 _viagemList.Add(viagem);
+                MessageBox.Show("Viagem municipal cadastrada com sucesso!");
             }
             else
             {
-                MessageBox.Show("Eh necessario selecionar um tipo de Viagem");
+                MessageBox.Show("Viagem não selecionada!");
             }
         }
 
@@ -90,9 +86,10 @@ namespace PROVA_DE_SUFICIENCIA
         }
         private TimeOnly FormatarHoras(string time)
         {
-            var hours = int.Parse(time.Substring(0, 2));
-            var minutes = int.Parse(time.Substring(3, 2));
-            return new TimeOnly(hours, minutes);
+            var horas = int.Parse(time.Substring(0, 2));
+            var minutos = int.Parse(time.Substring(3, 2));
+            return new TimeOnly(horas, minutos);
         }
+       
     }
 }

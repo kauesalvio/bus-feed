@@ -1,33 +1,27 @@
 ﻿using PROVA_DE_SUFICIENCIA.Entities;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace PROVA_DE_SUFICIENCIA
 {
+    /// <summary>
+    /// Kauê Felipe Salvio
+    /// </summary>
     public partial class Grafico : Form
     {
-        private List<Viagem> _listViagens;
-        private  Viagem _viagem;
+        private List<Viagem> _viagens;
+        private Viagem _viagem;
+        private List<Passageiro> _listCsv;
+
         public Grafico(Viagem viagem, List<Viagem> listViagens)
         {
-
-            _listViagens = listViagens;
+            _viagens = listViagens;
             _viagem = viagem;
+            _listCsv = new List<Passageiro>();
             InitializeComponent();
         }
 
-        private void ListViewCSV_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        private void ListViewCSV_SelectedIndexChanged(object sender, EventArgs e) { }
 
         private void Grafico_Load(object sender, EventArgs e)
         {
@@ -39,7 +33,7 @@ namespace PROVA_DE_SUFICIENCIA
             try
             {
                 lblValorTotal.Text = _viagem.GetValorTotal().ToString();
-                lblOciosas.Text = (_viagem.totalDePassageiros - _viagem.Passageiros.Count()).ToString();
+                lblOciosas.Text = (_viagem.numeroDePassageiros - _viagem.Passageiros.Count()).ToString();
 
                 ListViewCSV.Items.Clear();
                 cbxPlaca.SelectedItem = null;
@@ -48,6 +42,11 @@ namespace PROVA_DE_SUFICIENCIA
 
                 foreach (var passageiro in _viagem.Passageiros)
                 {
+                    var item = new ListViewItem(passageiro.Nome);
+                    item.SubItems.Add(passageiro.Idade.ToString());
+                    item.SubItems.Add(passageiro.Telefone.ToString());
+                    item.SubItems.Add($"R${passageiro.GetTarifa()}");
+                    ListViewCSV.Items.Add(item);
                     AtualizarCsv(passageiro);
                 }
             }
@@ -58,11 +57,7 @@ namespace PROVA_DE_SUFICIENCIA
         }
         private void AtualizarCsv(Passageiro passageiro)
         {
-                 var item = new ListViewItem(passageiro.Nome);
-                item.SubItems.Add(passageiro.Idade.ToString());
-                item.SubItems.Add(passageiro.Telefone.ToString());
-                item.SubItems.Add($"R${passageiro.GetTarifa()}");
-                ListViewCSV.Items.Add(item);
+            _listCsv.Add(passageiro);
         }
 
         private async void BtnExport_Click(object sender, EventArgs e)
@@ -76,10 +71,10 @@ namespace PROVA_DE_SUFICIENCIA
                         using (StreamWriter sw = new StreamWriter(new FileStream(sfd.FileName, FileMode.Create), Encoding.UTF8))
                         {
                             StringBuilder sb = new StringBuilder();
-                            sb.AppendLine("Nome;Idade;Telefone;Tarifa");
-                            foreach (ListViewItem item in ListViewCSV.Items)
+                            sb.AppendLine($"{_viagem.DataDaViagem.ToString() ?? string.Empty};{_viagem.HoraDaViagem.ToString() ?? string.Empty};{_viagem.PlacaOnibus};{_viagem.NomeMotorista};");
+                            foreach (var item in _listCsv)
                             {
-                                sb.AppendLine(string.Format($"{item.SubItems[0].Text};{item.SubItems[1].Text};{item.SubItems[2].Text};{item.SubItems[3].Text}"));
+                                sb.AppendLine(string.Format($"{item.GetType().Name.Substring(0, 1)};{item.Nome};{item.Telefone};{item.Idade};"));
                             }
                             await sw.WriteLineAsync(sb.ToString());
                             MessageBox.Show("Arquivo salvo com sucesso", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -96,11 +91,11 @@ namespace PROVA_DE_SUFICIENCIA
         private void button1_Click(object sender, EventArgs e)
         {
             if(cbxPlaca.SelectedItem != null)
-            _viagem = _listViagens.Where(x => x.PlacaOnibus == cbxPlaca.SelectedItem.ToString()).First();
+            _viagem = _viagens.Where(x => x.PlacaOnibus == cbxPlaca.SelectedItem.ToString()).First();
             if(cbxData.SelectedItem != null)
-            _viagem = _listViagens.Where(x => x.DataViagem.ToString() == cbxData.SelectedItem.ToString()).First();
+            _viagem = _viagens.Where(x => x.DataDaViagem.ToString() == cbxData.SelectedItem.ToString()).First();
             if (cbxHora.SelectedItem != null)
-                _viagem = _listViagens.Where(x => x.HoraViagem.ToString() == cbxHora.SelectedItem.ToString()).First();
+                _viagem = _viagens.Where(x => x.HoraDaViagem.ToString() == cbxHora.SelectedItem.ToString()).First();
 
 
             AtualizarDados();
@@ -108,9 +103,9 @@ namespace PROVA_DE_SUFICIENCIA
         private void comboBox1_MouseClick(object sender, MouseEventArgs e)
         {
             cbxPlaca.Items.Clear();
-            object[] items = new object[_listViagens.Count()];
-            var i = _listViagens.Count() - 1;
-            foreach (Viagem item in _listViagens)
+            object[] items = new object[_viagens.Count()];
+            var i = _viagens.Count() - 1;
+            foreach (Viagem item in _viagens)
             {
                 items[i] = new string(item.PlacaOnibus.ToString());
                 i--;
@@ -121,11 +116,11 @@ namespace PROVA_DE_SUFICIENCIA
         private void cbxData_MouseClick(object sender, MouseEventArgs e)
         {
             cbxData.Items.Clear();
-            object[] items = new object[_listViagens.Count()];
-            var i = _listViagens.Count() - 1;
-            foreach (Viagem item in _listViagens)
+            object[] items = new object[_viagens.Count()];
+            var i = _viagens.Count() - 1;
+            foreach (Viagem item in _viagens)
             {
-                items[i] = new string(item.DataViagem.ToString());
+                items[i] = new string(item.DataDaViagem.ToString());
                 i--;
             }
             cbxData.Items.AddRange(items);
@@ -134,21 +129,27 @@ namespace PROVA_DE_SUFICIENCIA
         private void cbxHora_MouseClick(object sender, MouseEventArgs e)
         {
             cbxHora.Items.Clear();
-            object[] items = new object[_listViagens.Count()];
-            var i = _listViagens.Count() - 1;
-            foreach (Viagem item in _listViagens)
+            object[] items = new object[_viagens.Count()];
+            var i = _viagens.Count() - 1;
+            foreach (Viagem item in _viagens)
             {
-                items[i] = new string(item.HoraViagem.ToString());
+                items[i] = new string(item.HoraDaViagem.ToString());
                 i--;
             }
             cbxHora.Items.AddRange(items);
         }
+
         private void btnMaisVelhos_Click(object sender, EventArgs e)
         {
             ListViewCSV.Items.Clear();
-               var velhosPassageiros = _listViagens.SelectMany( x=> x.Passageiros.Where(y=> y.Idade>60).OrderBy(y=>y.Nome)).ToList();
+            var velhosPassageiros = _viagens.SelectMany( x=> x.Passageiros.Where(y => y.Idade >= 60).OrderBy(y => y.Nome)).ToList();
             foreach (var passageiro in velhosPassageiros)
             {
+                var item = new ListViewItem(passageiro.Nome);
+                item.SubItems.Add(passageiro.Idade.ToString());
+                item.SubItems.Add(passageiro.Telefone.ToString());
+                item.SubItems.Add($"R${passageiro.GetTarifa()}");
+                ListViewCSV.Items.Add(item);
                 AtualizarCsv(passageiro);
             }
         }

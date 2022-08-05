@@ -1,13 +1,16 @@
 ﻿namespace PROVA_DE_SUFICIENCIA.Entities
 {
+    /// <summary>
+    /// Kauê Felipe Salvio
+    /// </summary>
     public class Idoso : Passageiro
     {
+
+        public string RegistroGeral { get; set; }
         public Idoso(string nome, string telefone, int idade, string rg) : base(nome, telefone, idade)
         {
-            Rg = rg;
+            RegistroGeral = rg;
         }
-
-        public string Rg { get; set; }
 
         public override float GetTarifa()
         {

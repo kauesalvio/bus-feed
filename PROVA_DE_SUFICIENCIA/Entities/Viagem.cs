@@ -1,18 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PROVA_DE_SUFICIENCIA.Entities
+﻿namespace PROVA_DE_SUFICIENCIA.Entities
 {
+    /// <summary>
+    /// Kauê Felipe Salvio
+    /// </summary>
     public abstract class Viagem
     {
-        public virtual int totalDePassageiros { get; set; }
+        public virtual int numeroDePassageiros { get; set; }
         public string PlacaOnibus { get; set; }
         public string NomeMotorista { get; set; }
-        public DateTime DataViagem { get; set; }
-        public TimeOnly HoraViagem { get; set; }
+        public DateTime DataDaViagem { get; set; }
+        public TimeOnly HoraDaViagem { get; set; }
         public List<Passageiro> Passageiros{ get; set; }
 
         public virtual void AddPassageiro(Passageiro passageiro)
@@ -24,12 +21,12 @@ namespace PROVA_DE_SUFICIENCIA.Entities
             return Passageiros.Select(x => x.GetTarifa()).Sum();
         }
 
-        public Viagem(string placaOnibus, string nomeMotorista, DateTime dataViagem, TimeOnly horaViagem)
+        public Viagem(string placaOnibus, string nomeMotorista, DateTime dataDaViagem, TimeOnly horaDaViagem)
         {
             PlacaOnibus = placaOnibus;
             NomeMotorista = nomeMotorista;
-            DataViagem = dataViagem;
-            HoraViagem = horaViagem;
+            DataDaViagem = dataDaViagem;
+            HoraDaViagem = horaDaViagem;
             Passageiros = new List<Passageiro>();
         }
     }

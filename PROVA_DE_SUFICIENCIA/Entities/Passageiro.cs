@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PROVA_DE_SUFICIENCIA.Entities
+﻿namespace PROVA_DE_SUFICIENCIA.Entities
 {
+    /// <summary>
+    /// Kauê Felipe Salvio
+    /// </summary>
     public class Passageiro
     {
         public string Nome { get; set; }
@@ -19,6 +16,8 @@ namespace PROVA_DE_SUFICIENCIA.Entities
             Telefone = telefone;
             Idade = idade;
         }
+
+        public Passageiro() { }
 
         public virtual float GetTarifa()
         {

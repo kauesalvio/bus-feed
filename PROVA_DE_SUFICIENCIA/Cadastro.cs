@@ -1,16 +1,10 @@
 ﻿using PROVA_DE_SUFICIENCIA.Entities;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace PROVA_DE_SUFICIENCIA
 {
+    /// <summary>
+    /// Kauê Felipe Salvio
+    /// </summary>
     public partial class Cadastro : Form
     {
 
@@ -98,7 +92,7 @@ namespace PROVA_DE_SUFICIENCIA
             }
         }
 
-        private bool ValidarCampos()
+        public bool ValidarCampos()
         {
             var valido = true;
             if (txtNome.Text.Length < 1 || txtNome.Text.Length > 100)
@@ -128,7 +122,7 @@ namespace PROVA_DE_SUFICIENCIA
             }
             if (checkIdoso.Checked & int.Parse(comboBox1.SelectedItem.ToString()) < 60)
             {
-                throw new ArgumentException("Idoso nao qualificado");
+                throw new ArgumentException("Usuário inválido!");
             }
 
             return valido;
@@ -149,10 +143,11 @@ namespace PROVA_DE_SUFICIENCIA
                         passageiro = new Passageiro(txtNome.Text, mskTxtTelefone.Text, int.Parse(comboBox1.SelectedItem.ToString()));
 
                     viagem.AddPassageiro(passageiro);
+                    MessageBox.Show("Passageiro registrado com sucesso! ", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Alguns campos foram prenchidos de forma errada");
+                    MessageBox.Show("Campos inválidos!");
                 }
             }
             catch (Exception ex)

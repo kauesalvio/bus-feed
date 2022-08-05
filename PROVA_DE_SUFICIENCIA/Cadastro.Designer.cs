@@ -46,45 +46,50 @@
             // lblEscola
             // 
             this.lblEscola.AutoSize = true;
-            this.lblEscola.Location = new System.Drawing.Point(26, 451);
+            this.lblEscola.Location = new System.Drawing.Point(152, 233);
+            this.lblEscola.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEscola.Name = "lblEscola";
-            this.lblEscola.Size = new System.Drawing.Size(61, 25);
+            this.lblEscola.Size = new System.Drawing.Size(40, 15);
             this.lblEscola.TabIndex = 25;
             this.lblEscola.Text = "Escola";
             // 
             // lblRG
             // 
             this.lblRG.AutoSize = true;
-            this.lblRG.Location = new System.Drawing.Point(26, 451);
+            this.lblRG.Location = new System.Drawing.Point(152, 233);
+            this.lblRG.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRG.Name = "lblRG";
-            this.lblRG.Size = new System.Drawing.Size(35, 25);
+            this.lblRG.Size = new System.Drawing.Size(22, 15);
             this.lblRG.TabIndex = 24;
             this.lblRG.Text = "RG";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 155);
+            this.label3.Location = new System.Drawing.Point(152, 91);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 25);
+            this.label3.Size = new System.Drawing.Size(51, 15);
             this.label3.TabIndex = 23;
             this.label3.Text = "Telefone";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 279);
+            this.label2.Location = new System.Drawing.Point(152, 163);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 25);
+            this.label2.Size = new System.Drawing.Size(36, 15);
             this.label2.TabIndex = 22;
             this.label2.Text = "Idade";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 13);
+            this.label1.Location = new System.Drawing.Point(152, 21);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 25);
+            this.label1.Size = new System.Drawing.Size(40, 15);
             this.label1.TabIndex = 21;
             this.label1.Text = "Nome";
             // 
@@ -92,9 +97,10 @@
             // 
             this.checkIdoso.AutoSize = true;
             this.checkIdoso.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkIdoso.Location = new System.Drawing.Point(277, 682);
+            this.checkIdoso.Location = new System.Drawing.Point(462, 111);
+            this.checkIdoso.Margin = new System.Windows.Forms.Padding(2);
             this.checkIdoso.Name = "checkIdoso";
-            this.checkIdoso.Size = new System.Drawing.Size(134, 52);
+            this.checkIdoso.Size = new System.Drawing.Size(91, 36);
             this.checkIdoso.TabIndex = 20;
             this.checkIdoso.Text = "Idoso";
             this.checkIdoso.UseVisualStyleBackColor = true;
@@ -104,9 +110,10 @@
             // 
             this.checkEstudante.AutoSize = true;
             this.checkEstudante.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkEstudante.Location = new System.Drawing.Point(277, 602);
+            this.checkEstudante.Location = new System.Drawing.Point(462, 70);
+            this.checkEstudante.Margin = new System.Windows.Forms.Padding(2);
             this.checkEstudante.Name = "checkEstudante";
-            this.checkEstudante.Size = new System.Drawing.Size(201, 52);
+            this.checkEstudante.Size = new System.Drawing.Size(138, 36);
             this.checkEstudante.TabIndex = 19;
             this.checkEstudante.Text = "Estudante";
             this.checkEstudante.UseVisualStyleBackColor = true;
@@ -114,21 +121,24 @@
             // 
             // registrar_pessoa
             // 
+            this.registrar_pessoa.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.registrar_pessoa.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.registrar_pessoa.Location = new System.Drawing.Point(12, 650);
+            this.registrar_pessoa.Location = new System.Drawing.Point(186, 317);
+            this.registrar_pessoa.Margin = new System.Windows.Forms.Padding(2);
             this.registrar_pessoa.Name = "registrar_pessoa";
-            this.registrar_pessoa.Size = new System.Drawing.Size(225, 69);
+            this.registrar_pessoa.Size = new System.Drawing.Size(171, 52);
             this.registrar_pessoa.TabIndex = 18;
             this.registrar_pessoa.Text = "Registrar";
-            this.registrar_pessoa.UseVisualStyleBackColor = true;
+            this.registrar_pessoa.UseVisualStyleBackColor = false;
             this.registrar_pessoa.Click += new System.EventHandler(this.registrar_pessoa_Click);
             // 
             // txtNome
             // 
             this.txtNome.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtNome.Location = new System.Drawing.Point(21, 53);
+            this.txtNome.Location = new System.Drawing.Point(152, 38);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(2);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(440, 55);
+            this.txtNome.Size = new System.Drawing.Size(251, 39);
             this.txtNome.TabIndex = 14;
             // 
             // comboBox1
@@ -235,42 +245,47 @@
             "98",
             "99",
             "100"});
-            this.comboBox1.Location = new System.Drawing.Point(21, 347);
+            this.comboBox1.Location = new System.Drawing.Point(152, 180);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 56);
+            this.comboBox1.Size = new System.Drawing.Size(251, 40);
             this.comboBox1.TabIndex = 0;
             // 
             // mskTxtRg
             // 
             this.mskTxtRg.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.mskTxtRg.Location = new System.Drawing.Point(16, 514);
+            this.mskTxtRg.Location = new System.Drawing.Point(152, 250);
+            this.mskTxtRg.Margin = new System.Windows.Forms.Padding(2);
             this.mskTxtRg.Mask = "00 000 000-0";
             this.mskTxtRg.Name = "mskTxtRg";
-            this.mskTxtRg.Size = new System.Drawing.Size(230, 55);
+            this.mskTxtRg.Size = new System.Drawing.Size(251, 39);
             this.mskTxtRg.TabIndex = 26;
             // 
             // txtEscola
             // 
             this.txtEscola.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtEscola.Location = new System.Drawing.Point(21, 514);
+            this.txtEscola.Location = new System.Drawing.Point(152, 250);
+            this.txtEscola.Margin = new System.Windows.Forms.Padding(2);
             this.txtEscola.Name = "txtEscola";
-            this.txtEscola.Size = new System.Drawing.Size(300, 55);
+            this.txtEscola.Size = new System.Drawing.Size(251, 39);
             this.txtEscola.TabIndex = 17;
             // 
             // mskTxtTelefone
             // 
             this.mskTxtTelefone.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.mskTxtTelefone.Location = new System.Drawing.Point(16, 196);
+            this.mskTxtTelefone.Location = new System.Drawing.Point(152, 108);
+            this.mskTxtTelefone.Margin = new System.Windows.Forms.Padding(2);
             this.mskTxtTelefone.Mask = "(00) 00000-0000";
             this.mskTxtTelefone.Name = "mskTxtTelefone";
-            this.mskTxtTelefone.Size = new System.Drawing.Size(244, 55);
+            this.mskTxtTelefone.Size = new System.Drawing.Size(251, 39);
             this.mskTxtTelefone.TabIndex = 27;
             // 
             // Cadastro
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(525, 842);
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ClientSize = new System.Drawing.Size(647, 505);
             this.Controls.Add(this.mskTxtTelefone);
             this.Controls.Add(this.mskTxtRg);
             this.Controls.Add(this.comboBox1);
@@ -285,6 +300,7 @@
             this.Controls.Add(this.txtEscola);
             this.Controls.Add(this.txtNome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Cadastro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro";
@@ -295,18 +311,18 @@
         }
 
         #endregion
-        private Label lblEscola;
-        private Label lblRG;
-        private Label label3;
-        private Label label2;
-        private Label label1;
-        private CheckBox checkIdoso;
-        private CheckBox checkEstudante;
-        private Button registrar_pessoa;
-        private TextBox txtNome;
-        private ComboBox comboBox1;
-        private MaskedTextBox mskTxtRg;
-        private TextBox txtEscola;
-        private MaskedTextBox mskTxtTelefone;
+        public Label lblEscola;
+        public Label lblRG;
+        public Label label3;
+        public Label label2;
+        public Label label1;
+        public CheckBox checkIdoso;
+        public CheckBox checkEstudante;
+        public Button registrar_pessoa;
+        public TextBox txtNome;
+        public ComboBox comboBox1;
+        public MaskedTextBox mskTxtRg;
+        public TextBox txtEscola;
+        public MaskedTextBox mskTxtTelefone;
     }
 }

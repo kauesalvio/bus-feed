@@ -48,12 +48,14 @@
             // 
             // BtnExport
             // 
-            this.BtnExport.Location = new System.Drawing.Point(146, 507);
+            this.BtnExport.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BtnExport.Location = new System.Drawing.Point(256, 411);
+            this.BtnExport.Margin = new System.Windows.Forms.Padding(2);
             this.BtnExport.Name = "BtnExport";
-            this.BtnExport.Size = new System.Drawing.Size(112, 34);
+            this.BtnExport.Size = new System.Drawing.Size(103, 37);
             this.BtnExport.TabIndex = 1;
             this.BtnExport.Text = "Export";
-            this.BtnExport.UseVisualStyleBackColor = true;
+            this.BtnExport.UseVisualStyleBackColor = false;
             this.BtnExport.Click += new System.EventHandler(this.BtnExport_Click);
             // 
             // ListViewCSV
@@ -66,10 +68,11 @@
             this.Idade,
             this.Telefone,
             this.Tarifa});
-            this.ListViewCSV.Location = new System.Drawing.Point(23, 12);
+            this.ListViewCSV.Location = new System.Drawing.Point(16, 7);
+            this.ListViewCSV.Margin = new System.Windows.Forms.Padding(2);
             this.ListViewCSV.MultiSelect = false;
             this.ListViewCSV.Name = "ListViewCSV";
-            this.ListViewCSV.Size = new System.Drawing.Size(359, 441);
+            this.ListViewCSV.Size = new System.Drawing.Size(343, 367);
             this.ListViewCSV.TabIndex = 2;
             this.ListViewCSV.UseCompatibleStateImageBehavior = false;
             this.ListViewCSV.View = System.Windows.Forms.View.Details;
@@ -95,103 +98,119 @@
             // 
             this.lblValorTotal.AutoSize = true;
             this.lblValorTotal.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblValorTotal.Location = new System.Drawing.Point(690, 184);
+            this.lblValorTotal.Location = new System.Drawing.Point(638, 92);
+            this.lblValorTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblValorTotal.Name = "lblValorTotal";
-            this.lblValorTotal.Size = new System.Drawing.Size(58, 24);
+            this.lblValorTotal.Size = new System.Drawing.Size(15, 17);
             this.lblValorTotal.TabIndex = 3;
-            this.lblValorTotal.Text = "label1";
+            this.lblValorTotal.Text = "0";
             // 
             // lblDados
             // 
             this.lblDados.AutoSize = true;
-            this.lblDados.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblDados.Location = new System.Drawing.Point(419, 73);
+            this.lblDados.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblDados.Location = new System.Drawing.Point(509, 28);
+            this.lblDados.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDados.Name = "lblDados";
-            this.lblDados.Size = new System.Drawing.Size(242, 96);
+            this.lblDados.Size = new System.Drawing.Size(106, 28);
             this.lblDados.TabIndex = 4;
-            this.lblDados.Text = "Dados";
+            this.lblDados.Text = "Resultados";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(456, 179);
+            this.label1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(483, 91);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 30);
+            this.label1.Size = new System.Drawing.Size(71, 17);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Valor total viagem:";
+            this.label1.Text = "Valor total";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(518, 422);
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.Location = new System.Drawing.Point(524, 337);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 34);
+            this.button1.Size = new System.Drawing.Size(129, 37);
             this.button1.TabIndex = 6;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Text = "Filtrar";
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // cbxPlaca
             // 
             this.cbxPlaca.FormattingEnabled = true;
-            this.cbxPlaca.Location = new System.Drawing.Point(748, 357);
+            this.cbxPlaca.Location = new System.Drawing.Point(524, 214);
+            this.cbxPlaca.Margin = new System.Windows.Forms.Padding(2);
             this.cbxPlaca.Name = "cbxPlaca";
-            this.cbxPlaca.Size = new System.Drawing.Size(182, 33);
+            this.cbxPlaca.Size = new System.Drawing.Size(129, 23);
             this.cbxPlaca.TabIndex = 7;
+            this.cbxPlaca.Text = "Placa ";
             this.cbxPlaca.MouseClick += new System.Windows.Forms.MouseEventHandler(this.comboBox1_MouseClick);
             // 
             // cbxData
             // 
             this.cbxData.FormattingEnabled = true;
-            this.cbxData.Location = new System.Drawing.Point(748, 422);
+            this.cbxData.Location = new System.Drawing.Point(524, 253);
+            this.cbxData.Margin = new System.Windows.Forms.Padding(2);
             this.cbxData.Name = "cbxData";
-            this.cbxData.Size = new System.Drawing.Size(182, 33);
+            this.cbxData.Size = new System.Drawing.Size(129, 23);
             this.cbxData.TabIndex = 8;
+            this.cbxData.Text = "Data";
             this.cbxData.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cbxData_MouseClick);
             // 
             // cbxHora
             // 
             this.cbxHora.FormattingEnabled = true;
-            this.cbxHora.Location = new System.Drawing.Point(748, 495);
+            this.cbxHora.Location = new System.Drawing.Point(524, 297);
+            this.cbxHora.Margin = new System.Windows.Forms.Padding(2);
             this.cbxHora.Name = "cbxHora";
-            this.cbxHora.Size = new System.Drawing.Size(182, 33);
+            this.cbxHora.Size = new System.Drawing.Size(129, 23);
             this.cbxHora.TabIndex = 9;
+            this.cbxHora.Text = "Hora";
             this.cbxHora.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cbxHora_MouseClick);
             // 
             // btnMaisVelhos
             // 
-            this.btnMaisVelhos.Location = new System.Drawing.Point(12, 507);
+            this.btnMaisVelhos.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnMaisVelhos.Location = new System.Drawing.Point(16, 411);
+            this.btnMaisVelhos.Margin = new System.Windows.Forms.Padding(2);
             this.btnMaisVelhos.Name = "btnMaisVelhos";
-            this.btnMaisVelhos.Size = new System.Drawing.Size(112, 34);
+            this.btnMaisVelhos.Size = new System.Drawing.Size(104, 37);
             this.btnMaisVelhos.TabIndex = 10;
-            this.btnMaisVelhos.Text = "MaisVelhos";
-            this.btnMaisVelhos.UseVisualStyleBackColor = true;
+            this.btnMaisVelhos.Text = "Mais Velhos";
+            this.btnMaisVelhos.UseVisualStyleBackColor = false;
             this.btnMaisVelhos.Click += new System.EventHandler(this.btnMaisVelhos_Click);
             // 
             // lblTotalDeVagasNaViagem
             // 
             this.lblTotalDeVagasNaViagem.AutoSize = true;
-            this.lblTotalDeVagasNaViagem.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTotalDeVagasNaViagem.Location = new System.Drawing.Point(388, 247);
+            this.lblTotalDeVagasNaViagem.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTotalDeVagasNaViagem.Location = new System.Drawing.Point(483, 130);
+            this.lblTotalDeVagasNaViagem.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotalDeVagasNaViagem.Name = "lblTotalDeVagasNaViagem";
-            this.lblTotalDeVagasNaViagem.Size = new System.Drawing.Size(293, 30);
+            this.lblTotalDeVagasNaViagem.Size = new System.Drawing.Size(82, 17);
             this.lblTotalDeVagasNaViagem.TabIndex = 12;
-            this.lblTotalDeVagasNaViagem.Text = "Numero de pessoas ociosas";
+            this.lblTotalDeVagasNaViagem.Text = "Ociosidade";
             // 
             // lblOciosas
             // 
             this.lblOciosas.AutoSize = true;
             this.lblOciosas.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblOciosas.Location = new System.Drawing.Point(690, 247);
+            this.lblOciosas.Location = new System.Drawing.Point(653, 130);
+            this.lblOciosas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblOciosas.Name = "lblOciosas";
-            this.lblOciosas.Size = new System.Drawing.Size(0, 24);
+            this.lblOciosas.Size = new System.Drawing.Size(0, 17);
             this.lblOciosas.TabIndex = 11;
             // 
             // Grafico
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(942, 640);
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ClientSize = new System.Drawing.Size(785, 475);
             this.Controls.Add(this.lblTotalDeVagasNaViagem);
             this.Controls.Add(this.lblOciosas);
             this.Controls.Add(this.btnMaisVelhos);
@@ -205,6 +224,7 @@
             this.Controls.Add(this.ListViewCSV);
             this.Controls.Add(this.BtnExport);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Grafico";
             this.Text = "Grafico";
             this.Load += new System.EventHandler(this.Grafico_Load);
